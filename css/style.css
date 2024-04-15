@@ -69,7 +69,6 @@ main{
     color: #f1f1f1;
     padding: 13px;
 }
-
 @media (max-width: 992px){
     main{
         padding: 70px;
@@ -100,7 +99,7 @@ main{
 .about-copete{
     width: 380px;
     font-size: 19px;
-    padding: 30px 0px 80px 0px;
+    padding: 15px 0px 80px 0px;
 }
 .about-contenedor{
     display: flex;
@@ -342,7 +341,7 @@ main{
     padding: 30px;
     width: 310px;
     height: 400px;
-    border-radius: 15px;
+    border-radius: 30px;
     overflow: hidden;
     background-color: #000000ad;
     transition: all 500ms ease;
@@ -421,7 +420,7 @@ form{
     background-color: #090b0c9c;
     height: 450px;
     width: 330px;
-    border-radius: 15px;
+    border-radius: 30px;
 }
 .label{
     padding-bottom:5px;
@@ -449,29 +448,27 @@ button:hover{
 }
 
 /* footer */
+.pie{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    gap: 40px;
+    justify-items: center;
+}
 footer{
     padding: 90px;
     background-color: #000000ea;
-    text-align: center;
-}
-.pie{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     text-align: left;
-    line-height: 22px;
 }
 .logo-pie{
     width: 80px;
 }
-
-
+ul{
+    padding-left: 0;
+}
 @media (max-width: 992px){
     footer{
         padding: 70px 30px;
-    }
-    .pie{
-        flex-direction: column;
-        gap: 50px;
+        text-align: center;
     }
 }
