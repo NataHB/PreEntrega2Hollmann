@@ -413,6 +413,7 @@ main{
 .serv-carta p{
     font-size: 20px;
     padding: 25px 0px;
+    width: auto;
 }
 
 .serv-carta span{
@@ -421,12 +422,6 @@ main{
     color: #000000;
     border-radius: 25px;
     padding: 10px;
-}
-
-@media (max-width: 992px){
-    .servicios p{
-        width: auto;
-    }
 }
 
 /* testimonios */
