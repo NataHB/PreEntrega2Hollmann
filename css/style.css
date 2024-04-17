@@ -370,7 +370,7 @@ main{
 
 /* servicios */
 .servicios p{
-    width: 750px;
+    width: 700px;
     font-size: 19px;
     padding-bottom: 35px;
 }
@@ -424,9 +424,16 @@ main{
     padding: 10px;
 }
 
+@media (max-width: 992px){
+    .servicios p{
+        width: auto;
+    }
+}
+
 /* testimonios */
 .testimonios{
     padding-bottom: 35px;
+    text-align: center;
 }
 
 .testimonio{
