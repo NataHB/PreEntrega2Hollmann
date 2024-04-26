@@ -1,0 +1,51 @@
+/* contacto */
+.main-contacto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 80px;
+
+    .contacto{
+        width: 500px;
+    }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            gap: 10px;
+            background-color: #090b0c9c;
+            height: 450px;
+            width: 330px;
+            border-radius: 30px;
+        
+        .label{
+                padding-bottom:5px;
+            }
+        
+        .input{
+                padding-bottom: 15px;
+                width: 250px;
+            }
+        
+        input{
+                padding: 10px;
+                width: 250px;
+            }
+        
+        button{
+                font-size: 15px;
+                background-color: #f1f1f1;
+                color: #000000;
+                border-style: none;
+                padding: 8px;
+                transition: all 400ms ease;;
+                }
+
+        button:hover{
+            background: #000000;
+            color: #f1f1f1;
+            padding: 10px;
+        }
+        }
+}

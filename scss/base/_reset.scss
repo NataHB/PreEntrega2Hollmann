@@ -1,0 +1,27 @@
+/* fuentes */
+@font-face {
+    font-family: 'JosefinSans';
+    src: url('../assets/JosefinSans-Regular.ttf');
+    font-size: 18px;
+}
+/* estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'JosefinSans';
+    color: #f1f1f1;
+}
+a{
+    text-decoration: none;
+    color: #f1f1f1;
+}
+body{
+    background-image: url(../images/back-negro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    padding: 30px 120px;
+}

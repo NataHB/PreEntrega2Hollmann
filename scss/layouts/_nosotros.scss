@@ -1,0 +1,42 @@
+/* nosotros */
+.nosotros-main{
+    padding: 0;
+
+    .nosotros{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    
+        .subtitulo{
+            font-size: 60px;
+            font-weight: bolder;
+        }
+    
+        img{
+            width: auto;
+            height: 600px;
+            padding: 40px;
+            border-radius: 500px;
+        }
+    }
+    .nosotros-contenido{
+        padding: 40px;
+        width: 800px;
+    
+        div{
+            padding-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .nosotros img{
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        border-radius: 500px;
+    }
+    .nosotros-contenido div{
+        padding-top: 20px;
+    }
+}
