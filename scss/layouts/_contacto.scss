@@ -23,7 +23,7 @@ form {
 	border-radius: 30px;
 	button {
 		font-size: 15px;
-		background-color: $blanco;
+		background-image: linear-gradient(45deg, $naranja, $ladrillo);
 		color: $negro;
 		border-style: none;
 		padding: 8px;
@@ -43,8 +43,7 @@ input {
 }
 button {
 	&:hover {
-		background: $negro;
+		background-image: linear-gradient(45deg, $naranja, $ladrillo);
 		color: $blanco;
-		padding: 10px;
 	}
 }
