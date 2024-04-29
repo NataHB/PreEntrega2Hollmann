@@ -1,0 +1,7 @@
+// mixin
+@mixin flex(){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    gap: $gap;
+}

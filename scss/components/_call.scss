@@ -1,32 +1,28 @@
 /* call */
-.call{
-    padding: 100px 0px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-
-    img{
-        width: 130px;
-    }
-
-    h2{
-        padding: 50px;
-    }
-
-    .call-boton{
-        font-size: 15px;
-        background-color: #f1f1f1;
-        color: #000000;
-        border-radius: 25px;
-        padding: 10px;
-        transition: all 400ms ease;;
-    }
-
-    .call-boton:hover{
-        background: #000000;
-        color: #f1f1f1;
-        padding: 13px;
-    }
+.call {
+	padding: 100px 0px;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	img {
+		width: 130px;
+	}
+	h2 {
+		padding: 50px;
+	}
+}
+.call-boton {
+	font-size: 15px;
+	background-color: $blanco;
+	color: $negro;
+	border-radius: 25px;
+	padding: 10px;
+	transition: all 400ms ease;
+	&:hover {
+		background: $negro;
+		color: $blanco;
+		padding: 13px;
+	}
 }
