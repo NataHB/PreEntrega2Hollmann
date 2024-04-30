@@ -1,6 +1,7 @@
 // mixin
-@mixin flex(){
+@mixin flex($direction, $wrap, $justify, $gap){
     display: flex;
+    flex-wrap: $wrap;
     flex-direction: $direction;
     justify-content: $justify;
     gap: $gap;

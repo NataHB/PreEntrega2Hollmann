@@ -8,15 +8,10 @@
 	font-weight: bolder;
 }
 .testimonio {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	gap: 50px;
+	@include flex(row, wrap, space-around, 50px);
 }
 .testigo {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	@include flex(column, wrap, space-around, 5px);
 	align-items: center;
 	text-align: center;
 	width: 300px;
@@ -26,10 +21,19 @@
 	transition: all 500ms ease;
 	&:hover {
 		transform: translateY(-1%);
-		height: min-content;
 		box-shadow: 10px 10px 15px $negro-difuminado;
+		:nth-child(3){
+		color: transparent;
+		background-image: $degrade;
+		background-clip: text;
+		}
 	}
+	
 	img {
 		padding: 40px 0px;
+		transition: all 500ms ease;
+	&:hover {
+		transform: scale(1.05);
+	}
 	}
 }

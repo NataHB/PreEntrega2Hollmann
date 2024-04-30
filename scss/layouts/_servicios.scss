@@ -10,15 +10,11 @@
 	font-size: 60px;
 	font-weight: bolder;
 	color: transparent;
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		background-clip: text;
 }
 .serv-contenedor {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 50px;
-	justify-content: center;
-	justify-content: space-evenly;
+	@include flex(row, wrap, space-between, 50px);
 }
 .serv-carta {
 	padding: 30px;
@@ -40,7 +36,7 @@
 	h3 {
 		font-size: 18px;
 		color: transparent;
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		background-clip: text;
 		font-weight: 800;
 		padding-bottom: 15px;
@@ -56,6 +52,19 @@
 		color: $negro;
 		border-radius: 25px;
 		padding: 10px;
+		transition: all 400ms ease;
+		animation: boton;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		&:hover {
+			background-image: $degrade;
+			color: $blanco;
+		}
+		@keyframes boton{
+			0%{ padding: 10px}
+			50%{ padding: 12px;}
+			100%{ padding: 10px;}
+		}
 	}
 }
 @media (max-width: 992px) {

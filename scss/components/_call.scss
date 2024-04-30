@@ -20,9 +20,16 @@
 	border-radius: 25px;
 	padding: 10px;
 	transition: all 400ms ease;
+	animation: boton;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
 	&:hover {
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		color: $blanco;
-		padding: 13px;
+	}
+	@keyframes boton{
+		0%{ padding: 10px}
+		50%{ padding: 12px;}
+		100%{ padding: 10px;}
 	}
 }

@@ -53,11 +53,24 @@ main {
   border-radius: 25px;
   padding: 10px;
   transition: all 400ms ease;
+  animation: boton;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 .call-boton:hover {
   background-image: linear-gradient(45deg, #ff6f00, #6b001b);
   color: #f1f1f1;
-  padding: 13px;
+}
+@keyframes boton {
+  0% {
+    padding: 10px;
+  }
+  50% {
+    padding: 12px;
+  }
+  100% {
+    padding: 10px;
+  }
 }
 
 /* footer */
@@ -103,10 +116,27 @@ ul h2 {
   padding: 5px 20px;
 }
 
+#progress {
+  position: fixed;
+  top: 0;
+  width: 0%;
+  background: linear-gradient(45deg, #ff6f00, #6b001b);
+  height: 8px;
+  z-index: 100;
+  animation: animacion auto linear;
+  animation-timeline: scroll(root block);
+}
+
+@keyframes animacion {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 /* home */
 .home {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
 }
 .home p {
@@ -133,11 +163,24 @@ ul h2 {
   border-radius: 25px;
   padding: 10px;
   transition: all 400ms ease;
+  animation: boton;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 .home-boton:hover {
   background-image: linear-gradient(45deg, #ff6f00, #6b001b);
   color: #f1f1f1;
-  padding: 13px;
+}
+@keyframes boton {
+  0% {
+    padding: 10px;
+  }
+  50% {
+    padding: 12px;
+  }
+  100% {
+    padding: 10px;
+  }
 }
 
 /* About */
@@ -158,13 +201,17 @@ ul h2 {
 .about-contenedor {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   gap: 130px;
-  justify-content: space-evenly;
 }
 
 .about-carta {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
   align-items: center;
   text-align: center;
   width: 220px;
@@ -172,15 +219,28 @@ ul h2 {
 }
 .about-carta img {
   width: 75px;
-  transition: all 400ms ease;
+  animation: animacion-about linear;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
-.about-carta img:hover {
-  width: 95px;
+@keyframes animacion-about {
+  0% {
+    width: 75px;
+  }
+  50% {
+    width: 85px;
+  }
+  100% {
+    width: 75px;
+  }
 }
 .about-carta h3 {
   font-size: 25px;
   font-weight: 800;
   padding-top: 25px;
+  color: transparent;
+  background-image: linear-gradient(45deg, #ff6f00, #6b001b);
+  background-clip: text;
 }
 .about-carta p {
   color: #f1f1f1;
@@ -207,6 +267,8 @@ ul h2 {
 .spam-contenedor {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
   gap: 30px;
   background-color: rgba(0, 0, 0, 0.5529411765);
   border-radius: 30px;
@@ -215,7 +277,10 @@ ul h2 {
 
 .spam-contenido {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
   width: 500px;
   padding: 45px;
 }
@@ -234,11 +299,24 @@ ul h2 {
   border-radius: 25px;
   padding: 10px;
   transition: all 400ms ease;
+  animation: boton;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 .spam-boton:hover {
   background-image: linear-gradient(45deg, #ff6f00, #6b001b);
   color: #f1f1f1;
-  padding: 13px;
+}
+@keyframes boton {
+  0% {
+    padding: 10px;
+  }
+  50% {
+    padding: 12px;
+  }
+  100% {
+    padding: 10px;
+  }
 }
 
 /* Información */
@@ -255,20 +333,23 @@ ul h2 {
 .información-contenedor {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   gap: 50px;
-  justify-content: space-evenly;
 }
 
 .información-carta {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: end;
+  gap: 5px;
   background-color: rgba(0, 0, 0, 0.5529411765);
   border-radius: 20px;
   width: 250px;
-  height: 340px;
+  height: 350px;
   padding: 35px;
-  display: flex;
   text-align: left;
-  flex-direction: column;
-  justify-content: end;
   transition: all 400ms ease;
 }
 .información-carta:hover {
@@ -281,7 +362,9 @@ ul h2 {
 }
 .información-carta h3 {
   font-size: 25px;
-  color: #f1f1f1;
+  color: transparent;
+  background-image: linear-gradient(45deg, #ff6f00, #6b001b);
+  background-clip: text;
   padding-bottom: 10px;
 }
 .información-carta p {
@@ -295,10 +378,24 @@ ul h2 {
   border-radius: 25px;
   padding: 10px;
   transition: all 400ms ease;
+  animation: boton;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 .informacion-boton:hover {
   background-image: linear-gradient(45deg, #ff6f00, #6b001b);
   color: #f1f1f1;
+}
+@keyframes boton {
+  0% {
+    padding: 10px;
+  }
+  50% {
+    padding: 12px;
+  }
+  100% {
+    padding: 10px;
+  }
 }
 
 /* acordion */
@@ -352,12 +449,13 @@ ul h2 {
 .nosotros {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
+  gap: 40px;
 }
 .nosotros img {
   width: auto;
   height: 600px;
-  padding: 40px;
   border-radius: 500px;
 }
 
@@ -403,9 +501,9 @@ ul h2 {
 .serv-contenedor {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 50px;
-  justify-content: center;
-  justify-content: space-evenly;
 }
 
 .serv-carta {
@@ -445,6 +543,25 @@ ul h2 {
   color: #000000;
   border-radius: 25px;
   padding: 10px;
+  transition: all 400ms ease;
+  animation: boton;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.serv-carta span:hover {
+  background-image: linear-gradient(45deg, #ff6f00, #6b001b);
+  color: #f1f1f1;
+}
+@keyframes boton {
+  0% {
+    padding: 10px;
+  }
+  50% {
+    padding: 12px;
+  }
+  100% {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -466,14 +583,17 @@ ul h2 {
 .testimonio {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
   gap: 50px;
 }
 
 .testigo {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
   align-items: center;
   text-align: center;
   width: 300px;
@@ -484,17 +604,26 @@ ul h2 {
 }
 .testigo:hover {
   transform: translateY(-1%);
-  height: min-content;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5529411765);
+}
+.testigo:hover :nth-child(3) {
+  color: transparent;
+  background-image: linear-gradient(45deg, #ff6f00, #6b001b);
+  background-clip: text;
 }
 .testigo img {
   padding: 40px 0px;
+  transition: all 500ms ease;
+}
+.testigo img:hover {
+  transform: scale(1.05);
 }
 
 /* contacto */
 .main-contacto {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   gap: 80px;
 }
@@ -510,9 +639,11 @@ ul h2 {
 
 form {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
-  padding: 40px;
+  justify-content: flex-start;
   gap: 10px;
+  padding: 40px;
   background-color: rgba(0, 0, 0, 0.5529411765);
   height: 450px;
   width: 330px;
@@ -523,8 +654,27 @@ form button {
   background-image: linear-gradient(45deg, #ff6f00, #6b001b);
   color: #000000;
   border-style: none;
+  border-radius: 15px;
   padding: 8px;
   transition: all 400ms ease;
+  animation: boton;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+form button:hover {
+  background-image: linear-gradient(45deg, #ff6f00, #6b001b);
+  color: #f1f1f1;
+}
+@keyframes boton {
+  0% {
+    padding: 10px;
+  }
+  50% {
+    padding: 12px;
+  }
+  100% {
+    padding: 10px;
+  }
 }
 
 .label {

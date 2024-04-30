@@ -1,7 +1,5 @@
 /* home */
 .home {
-	display: flex;
-	flex-direction: column;
 	height: 100vh;
 	p {
 		font-size: 22px;
@@ -9,7 +7,7 @@
 		line-height: 25px;
 		padding-bottom: 40px;
         color: transparent;
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		background-clip: text;
 	}
 }
@@ -26,10 +24,17 @@
 	border-radius: 25px;
 	padding: 10px;
 	transition: all 400ms ease;
+	animation: boton;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
 	&:hover {
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		color: $blanco;
-		padding: 13px;
+	}
+	@keyframes boton{
+		0%{ padding: 10px}
+		50%{ padding: 12px;}
+		100%{ padding: 10px;}
 	}
 }
 /* About */
@@ -37,7 +42,7 @@
 	font-size: 60px;
 	font-weight: bolder;
     color: transparent;
-	background-image: linear-gradient(45deg, $naranja, $ladrillo);
+	background-image: $degrade;
     background-clip: text;
 }
 .about-copete {
@@ -46,29 +51,32 @@
 	padding: 15px 0px 80px 0px;
 }
 .about-contenedor {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 130px;
-	justify-content: space-evenly;
+	@include flex(row, wrap, space-around, 130px);
 }
 .about-carta {
-	display: flex;
-	flex-direction: column;
+	@include flex(column, nowrap, flex-start, 5px);
 	align-items: center;
 	text-align: center;
 	width: 220px;
 	height: 130px;
 	img {
 		width: 75px;
-		transition: all 400ms ease;
-		&:hover {
-			width: 95px;
-		}
+		animation: animacion-about linear;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes animacion-about{
+		0%{ width: 75px;}
+		50%{ width: 85px;}
+		100%{ width: 75px;}
 	}
 	h3 {
 		font-size: 25px;
 		font-weight: 800;
 		padding-top: 25px;
+		color: transparent;
+		background-image: $degrade;
+		background-clip: text;
 	}
 	p {
 		color: $blanco;
@@ -83,7 +91,7 @@
 		font-weight: bolder;
 		padding-bottom: 50px;
         color: transparent;
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		background-clip: text;
 	}
 	img {
@@ -92,16 +100,13 @@
 	}
 }
 .spam-contenedor {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
+	@include flex(row, wrap, center, 30px);
 	background-color: $negro-difuminado;
 	border-radius: 30px;
 	padding: 50px;
 }
 .spam-contenido {
-	display: flex;
-	flex-direction: column;
+	@include flex(column, nowrap, flex-start, 5px);
 	width: 500px;
 	padding: 45px;
 	h3 {
@@ -119,10 +124,17 @@
 	border-radius: 25px;
 	padding: 10px;
 	transition: all 400ms ease;
+	animation: boton;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
 	&:hover {
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		color: $blanco;
-		padding: 13px;
+	}
+	@keyframes boton{
+		0%{ padding: 10px}
+		50%{ padding: 12px;}
+		100%{ padding: 10px;}
 	}
 }
 /* Información */
@@ -131,26 +143,21 @@
 	font-weight: bolder;
 	padding-bottom: 30px;
     color: transparent;
-	background-image: linear-gradient(45deg, $naranja, $ladrillo);
+	background-image: $degrade;
     background-clip: text;
     text-align: center;
 }
 .información-contenedor {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 50px;
-	justify-content: space-evenly;
+	@include flex(row, wrap, space-around, 50px);
 }
 .información-carta {
+	@include flex(column, nowrap, end, 5px);
 	background-color: $negro-difuminado;
 	border-radius: 20px;
 	width: 250px;
-	height: 340px;
+	height: 350px;
 	padding: 35px;
-	display: flex;
 	text-align: left;
-	flex-direction: column;
-	justify-content: end;
 	transition: all 400ms ease;
 	&:hover {
         transform: scale(1.05);
@@ -162,7 +169,9 @@
 	}
 	h3 {
 		font-size: 25px;
-		color: $blanco;
+		color: transparent;
+		background-image: $degrade;
+		background-clip: text;
 		padding-bottom: 10px;
 	}
 	p {
@@ -176,9 +185,17 @@
 	border-radius: 25px;
 	padding: 10px;
 	transition: all 400ms ease;
+	animation: boton;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
 	&:hover {
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		color: $blanco;
+	}
+	@keyframes boton{
+		0%{ padding: 10px}
+		50%{ padding: 12px;}
+		100%{ padding: 10px;}
 	}
 }
 /* acordion */
@@ -186,7 +203,7 @@
 	padding-top: 130px;
 }
 .acordion-boton {
-    background-image: linear-gradient(45deg, $naranja, $ladrillo);
+    background-image: $degrade;
 }
 @media (max-width: 992px) {
 	main {

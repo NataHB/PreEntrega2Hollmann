@@ -1,9 +1,6 @@
 /* contacto */
 .main-contacto {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: 80px;
+	@include flex(row, wrap, space-between, 80px);
 }
 .subtitulo {
 	font-size: 60px;
@@ -13,21 +10,32 @@
 	width: 500px;
 }
 form {
-	display: flex;
-	flex-direction: column;
+	@include flex(column, nowrap, flex-start, 10px);
 	padding: 40px;
-	gap: 10px;
 	background-color: $negro-difuminado;
 	height: 450px;
 	width: 330px;
 	border-radius: 30px;
 	button {
 		font-size: 15px;
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		color: $negro;
 		border-style: none;
+		border-radius: 15px;
 		padding: 8px;
 		transition: all 400ms ease;
+		animation: boton;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		&:hover {
+			background-image: $degrade;
+			color: $blanco;
+		}
+		@keyframes boton{
+			0%{ padding: 10px}
+			50%{ padding: 12px;}
+			100%{ padding: 10px;}
+		}
 	}
 }
 .label {
@@ -43,7 +51,7 @@ input {
 }
 button {
 	&:hover {
-		background-image: linear-gradient(45deg, $naranja, $ladrillo);
+		background-image: $degrade;
 		color: $blanco;
 	}
 }
