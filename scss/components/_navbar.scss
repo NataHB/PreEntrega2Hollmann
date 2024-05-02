@@ -5,11 +5,12 @@
 .container-fluid{
     padding: 5px 20px;
 }
+/* barra de progreso */
 #progress{
     position: fixed;
     top: 0;
     width: 0%;
-    background: $degrade;;
+    background: $degrade;
     height: 8px;
     z-index: 100;
     animation: animacion auto linear;
