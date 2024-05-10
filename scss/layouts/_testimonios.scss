@@ -11,7 +11,7 @@
 	@include flex(row, wrap, space-around, 50px);
 }
 .testigo {
-	@include flex(column, wrap, space-around, 5px);
+	@include flex(column, wrap, space-around, 25px);
 	align-items: center;
 	text-align: center;
 	width: 300px;
@@ -30,7 +30,8 @@
 	}
 	
 	img {
-		padding: 40px 0px;
+		width: 180px;
+		border-radius: 100px;
 		transition: all 500ms ease;
 	&:hover {
 		transform: scale(1.05);

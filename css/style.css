@@ -215,8 +215,10 @@ ul h2 {
   gap: 5px;
   align-items: center;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5529411765);
+  padding: 25px;
   width: 220px;
-  height: 130px;
+  border-radius: 15px;
 }
 .about-carta img {
   width: 75px;
@@ -514,12 +516,12 @@ ul h2 {
   border-radius: 30px;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5529411765);
-  transition: all 500ms ease;
+  transition: all 400ms ease-in-out;
 }
 .serv-carta:hover {
   transform: translateY(-1%);
-  height: min-content;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5529411765);
+  height: 900px;
 }
 .serv-carta h2 {
   font-size: 55px;
@@ -533,10 +535,9 @@ ul h2 {
   font-weight: 800;
   padding-bottom: 15px;
 }
-.serv-carta p {
+.serv-carta ul {
   font-size: 20px;
   padding: 25px 0px;
-  width: auto;
 }
 .serv-carta span {
   font-size: 18px;
@@ -594,7 +595,7 @@ ul h2 {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
-  gap: 5px;
+  gap: 25px;
   align-items: center;
   text-align: center;
   width: 300px;
@@ -613,7 +614,8 @@ ul h2 {
   background-clip: text;
 }
 .testigo img {
-  padding: 40px 0px;
+  width: 180px;
+  border-radius: 100px;
   transition: all 500ms ease;
 }
 .testigo img:hover {
